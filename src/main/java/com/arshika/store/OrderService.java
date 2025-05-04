@@ -8,7 +8,11 @@ public class OrderService {
         //now we want to store this on a variable so we can use it
         this.paymentService = paymentService;
     }
+    //setter to inject dependency
     public void placeOrder() {
        paymentService.paymentProcess(10);
     }
+//    public void setPaymentService(PaymentService paymentService) {
+//        this.paymentService = paymentService;
+//    }
 }

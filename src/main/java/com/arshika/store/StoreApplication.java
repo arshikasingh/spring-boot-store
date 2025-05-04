@@ -8,6 +8,7 @@ public class StoreApplication {
 
 	public static void main(String[] args) {
 //		SpringApplication.run(StoreApplication.class, args);
+		//sedond way to inject dependency isthrough setters
 		var orderService = new OrderService(new PayPalPaymentService());
 		orderService.placeOrder();
 	}
