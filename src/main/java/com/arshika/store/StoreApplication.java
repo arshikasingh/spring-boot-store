@@ -11,6 +11,9 @@ public class StoreApplication {
 		//sedond way to inject dependency isthrough setters
 		var orderService = new OrderService(new PayPalPaymentService());
 		orderService.placeOrder();
+
+		var notificationServiceObj = new NotificationManager(new EmailNotificationServiceImp());
+		notificationServiceObj.notifMessage();
 	}
 
 
