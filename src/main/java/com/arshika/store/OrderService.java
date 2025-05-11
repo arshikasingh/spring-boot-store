@@ -2,9 +2,10 @@ package com.arshika.store;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component- here we can also use service annotation - both work for bean configuration through annotation
 public class OrderService {
-    private PaymentService paymentService;
+
+    private PaymentService paymentService;//You're declaring a variable named paymentService that can hold an object of any class that implements PaymentService interface.
 //the best way to inject dependency is through constructor by passing them as an argument
     //constructor
     public OrderService(PaymentService paymentService) {

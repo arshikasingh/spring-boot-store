@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service("stripe")//if we have two class which implementing same interface so at the time of bean creation the spring bott enabled to understand
+//@Service("stripe")//if we have two class which implementing same interface so at the time of bean creation the spring bott enabled to understand
 //for which class we have to make bean so there are 3 ways to make beans
 //1- use primary annotation - set default class
 //2-using qualifier annotation like @Qualifier("stripePaymentService") - this is the bean name of StripePaymentService class
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 //like - @Autowired
 //@Qualifier("stripe")
 //private PaymentService paymentService;
-@Primary
+//@Primary
 public class StripePaymentService implements PaymentService {
     @Value("${stripe.apiUrl}")
     private String apiUrl;
